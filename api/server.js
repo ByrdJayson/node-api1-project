@@ -47,4 +47,17 @@ server.post('/api/users', async (req, res) => {
     }
 })
 
+//DELETE REQUESTS
+server.delete('/api/users/:id', async (req, res) => {
+    try {
+        const { id } = req.params
+        const user = await Users.remove(id)
+        if(!user) {
+            return res.status(404).json({message: "The user with the specified ID does not exist"})
+        } else return user
+    } catch(err) {
+        res.status(500).json({message: "The user could not be removed"})
+    }
+})
+
 module.exports = server; // EXPORT YOUR SERVER instead of {}
