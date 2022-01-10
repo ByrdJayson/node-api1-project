@@ -30,7 +30,7 @@ Add the code necessary in `index.js` and `api/server.js` to create a Web API and
 | DELETE | /api/users/:id | Removes the user with the specified `id` and returns the deleted user.                                 |
 | PUT    | /api/users/:id | Updates the user with the specified `id` using data from the `request body`. Returns the modified user |
 
-#### User Schema
+#### User Schema 
 
 Each User _resource_ should conform to the following structure (AKA schema):
 
